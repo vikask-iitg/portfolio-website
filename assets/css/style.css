@@ -2594,3 +2594,75 @@ textarea.form-input:is(*) {
   background: #ffffff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.22);
 }
+
+/* contact form: a little narrower, centred */
+.contact-form {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+/* contact form: shorter fields */
+.form-title,
+.form-title:is(*) { font-size: 18px; margin-bottom: 12px; }
+
+.input-wrapper,
+.input-wrapper:is(*) { gap: 12px; margin-bottom: 12px; }
+
+.form-input,
+.form-input:is(*) {
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+textarea.form-input,
+textarea.form-input:is(*) {
+  min-height: 70px;
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+.form-btn,
+.form-btn:is(*) {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 8px;
+  gap: 8px;
+}
+
+.form-btn ion-icon { font-size: 14px; }
+
+/* map: same width as the form, a little shorter */
+.mapbox,
+.mapbox:is(*) {
+  max-width: 720px;
+  margin-inline: auto;
+  height: 220px;
+}
+
+@media (min-width: 580px) {
+  .mapbox,
+  .mapbox:is(*) { height: 300px; }
+}
+
+/* show the map in its normal Google Maps colours (the template greyed and inverted it) */
+.mapbox iframe { filter: none; }
+
+/* thank-you note shown after the contact form is sent */
+.form-success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 720px;
+  margin: 0 auto 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(166, 92, 6, 0.08);
+  border: 1px solid rgba(166, 92, 6, 0.25);
+  color: var(--white-1);
+  font-size: 14px;
+}
+
+.form-success[hidden] { display: none; }
+.form-success span { display: inline; }
+.form-success ion-icon { color: var(--orange-yellow-crayola); font-size: 18px; flex: none; }

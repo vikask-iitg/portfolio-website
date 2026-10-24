@@ -133,3 +133,15 @@ navigationLinks.forEach(function (link) {
 // open the page named in the URL hash, e.g. index.html#projects
 const initialPage = location.hash.slice(1);
 if (document.querySelector('[data-page="' + initialPage + '"]')) showPage(initialPage);
+
+
+
+// after FormSubmit redirects back (?sent=1#contact), show a thank-you note
+const formSuccess = document.querySelector("[data-form-success]");
+const params = new URLSearchParams(location.search);
+
+if (formSuccess && params.get("sent") === "1") {
+  showPage("contact");
+  formSuccess.hidden = false;
+  history.replaceState(null, "", location.pathname + "#contact");
+}
