@@ -2571,3 +2571,14 @@ textarea.form-input:is(*) {
 }
 
 .form-btn ion-icon { font-size: 16px; }
+
+/* nav strip: very light tint of #A65C06 (light mode only) */
+:root:not([data-theme="dark"]) .navbar {
+  background: rgba(166, 92, 6, 0.06);
+  border-color: rgba(166, 92, 6, 0.14);
+}
+
+/* the mobile navbar floats over content, so keep it opaque there */
+@media (max-width: 767px) {
+  :root:not([data-theme="dark"]) .navbar { background: #fbf6f0; }
+}
