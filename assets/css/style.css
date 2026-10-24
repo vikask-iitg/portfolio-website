@@ -2689,3 +2689,6 @@ textarea.form-input:is(*) {
 
 /* locked button while a message is sending */
 .form-btn:disabled { cursor: not-allowed; }
+
+/* keep the left side (logo, title) of wide screenshots in view */
+.blog-banner-box.banner-left img { object-position: left center; }
