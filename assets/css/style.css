@@ -2666,3 +2666,8 @@ textarea.form-input:is(*) {
 .form-success[hidden] { display: none; }
 .form-success span { display: inline; }
 .form-success ion-icon { color: var(--orange-yellow-crayola); font-size: 18px; flex: none; }
+
+/* TaskFlow screenshot is pre-padded to the banner's shape: fill it, no hover zoom */
+.blog-banner-box.banner-contain img { object-fit: cover; }
+
+.blog-post-item > .blog-card:hover .blog-banner-box.banner-contain img { transform: none; }
