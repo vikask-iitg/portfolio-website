@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vikas Kumar Khurendra · Full Stack Developer</title>
+  <meta name="description" content="Vikas Kumar Khurendra is a full stack web developer in Bengaluru building React interfaces and Node.js APIs. M.Tech CSE, IIT Guwahati.">
+  <meta name="author" content="Vikas Kumar Khurendra">
+
+  <!-- TODO: replace with your deployed URL -->
+  <link rel="canonical" href="https://vikask-iitg.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vikas Kumar Khurendra · Full Stack Developer">
+  <meta property="og:description" content="Full stack web developer building React interfaces and Node.js APIs.">
+  <meta property="og:url" content="https://vikask-iitg.github.io/">
+  <meta property="og:image" content="https://vikask-iitg.github.io/og-image.png"><!-- TODO: add a 1200×630 og-image.png -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--
+    - favicon
+  -->
+  <link rel="icon" href="./assets/images/avatar.svg" type="image/svg+xml">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!--
+    - theme: light by default, dark if the visitor chose it before
+  -->
+  <script>
+    try {
+      if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {}
+  </script>
+</head>
+
+<body>
+
+  <!--
+    Layout based on the vCard personal portfolio template by codewithsadee (MIT License)
+    https://github.com/codewithsadee/vcard-personal-portfolio
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <!-- To use your photo: add it to assets/images/ and change the src below -->
+          <img src="./assets/images/profile.jpg" alt="Photo of Vikas Kumar Khurendra" width="80" height="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Vikas Kumar Khurendra"><span class="name-first">Vikas Kumar</span> <span class="name-last">Khurendra</span></h1>
+          <p class="credential"><span class="cred-degree">M.Tech, Computer Science</span><span class="cred-dot" aria-hidden="true">·</span><span class="cred-school">IIT Guwahati</span></p>
+          <p class="title">Full Stack Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn aria-expanded="false" aria-controls="sidebar-more">
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more" id="sidebar-more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:vikask.iitg@gmail.com" class="contact-link">vikask.iitg@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline" aria-hidden="true"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+919406355802" class="contact-link">+91 94063 55802</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <svg class="outline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5"/><path d="M8 10.5v6"/><circle cx="8" cy="7.4" r="1" fill="currentColor" stroke="none"/><path d="M11.8 16.5v-6"/><path d="M11.8 13.3c0-1.7 1.1-2.8 2.5-2.8s2.2 1 2.2 2.7v3.3"/></svg>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/vikask-iitg" class="contact-link" target="_blank" rel="noopener">in/vikask-iitg</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <svg class="outline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">GitHub</p>
+              <a href="https://github.com/vikask-iitg" class="contact-link" target="_blank" rel="noopener">github.com/vikask-iitg</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="school-outline" aria-hidden="true"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Education</p>
+              <p class="contact-link">M.Tech CSE, IIT Guwahati</p>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Bengaluru, India</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/vikask-iitg" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+              <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/vikask-iitg" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="mailto:vikask.iitg@gmail.com" class="social-link" aria-label="Email">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar" aria-label="Pages">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link="about" aria-current="page">About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="resume">Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="projects">Projects</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="contact">Contact</button>
+          </li>
+          <li class="navbar-item">
+            <button class="theme-switch" data-theme-toggle role="switch" aria-checked="false" aria-label="Dark mode" title="Toggle dark mode">
+              <span class="theme-switch-track" aria-hidden="true">
+                <ion-icon class="theme-switch-icon sun" name="sunny"></ion-icon>
+                <ion-icon class="theme-switch-icon moon" name="moon"></ion-icon>
+                <span class="theme-switch-knob"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a full stack web developer with 4 years of industry experience building React interfaces, the Node.js
+            APIs behind them, and the performance work that makes both feel fast. I'm currently a Full Stack Web
+            Developer at Gushwork in Bengaluru, working on an AI-powered growth platform.
+          </p>
+          <p>
+            Before that I spent three years at Innotab Technologies building scalable web apps with React, Redux and
+            REST APIs. I then completed an M.Tech in Computer Science at IIT Guwahati, where I published research on
+            ML-based attack detection in IoT at IEEE INDICON 2025 and was a teaching assistant for Data Structures,
+            Operating Systems and Computer Networks.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What I'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Frontend development</h4>
+                <p class="service-item-text">
+                  Responsive, accessible interfaces in React with Redux, Context API and Tailwind CSS, built from reusable components.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="server-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Backend &amp; APIs</h4>
+                <p class="service-item-text">
+                  RESTful APIs with Node.js and Express on MongoDB, PostgreSQL or MySQL, including secure JWT authentication.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="speedometer-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Performance &amp; growth</h4>
+                <p class="service-item-text">
+                  Optimising Core Web Vitals and search visibility, and building automated pipelines that turn traffic into leads.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="flask-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Research</h4>
+                <p class="service-item-text">
+                  Machine learning for IoT security: detecting and localising communication delay attacks (IEEE INDICON 2025).
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - experience cards (click to open details)
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Experience</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-experience-item tabindex="0" role="button" aria-haspopup="dialog">
+                <div class="exp-head">
+                  <figure class="testimonials-avatar-box logo-full">
+                    <img src="./assets/images/logo-gushwork.jpg" alt="Gushwork logo" data-experience-logo>
+                  </figure>
+                  <div>
+                    <h4 class="h4 testimonials-item-title" data-experience-title>Full Stack Web Developer</h4>
+                    <p class="experience-org" data-experience-date>Gushwork, Bengaluru · Apr 2026 – Present</p>
+                  </div>
+                </div>
+                <div class="testimonials-text" data-experience-text>
+                  <p>Engineering and scaling web solutions for an AI-powered growth platform, boosting search visibility and lead generation. Building full-stack workflows, optimising Core Web Vitals and creating automated pipelines to capture high-intent buyer traffic.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-experience-item tabindex="0" role="button" aria-haspopup="dialog">
+                <div class="exp-head">
+                  <figure class="testimonials-avatar-box">
+                    <img src="./assets/images/logo-innotab.png" alt="Innotab Technologies logo" data-experience-logo>
+                  </figure>
+                  <div>
+                    <h4 class="h4 testimonials-item-title" data-experience-title>Software Engineer</h4>
+                    <p class="experience-org" data-experience-date>Innotab Technologies, Bangalore · Feb 2020 – Apr 2023</p>
+                  </div>
+                </div>
+                <div class="testimonials-text" data-experience-text>
+                  <p>Built scalable web applications with reusable components, Redux state management and robust RESTful APIs. Streamlined SDLC workflows across QA and design teams, ran code reviews and troubleshot production issues to improve reliability.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-experience-item tabindex="0" role="button" aria-haspopup="dialog">
+                <div class="exp-head">
+                  <figure class="testimonials-avatar-box">
+                    <img src="./assets/images/logo-multiapps.png" alt="MultiApps Technologies logo" data-experience-logo>
+                  </figure>
+                  <div>
+                    <h4 class="h4 testimonials-item-title" data-experience-title>Web Developer Intern</h4>
+                    <p class="experience-org" data-experience-date>MultiApps Technologies, Bangalore · Jul 2019 – Jan 2020</p>
+                  </div>
+                </div>
+                <div class="testimonials-text" data-experience-text>
+                  <p>Trained in HTML5, CSS3, Bootstrap and JavaScript. Built responsive UI components and a restaurant menu gallery, tested features and integrated the frontend with backend APIs.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-experience-item tabindex="0" role="button" aria-haspopup="dialog">
+                <div class="exp-head">
+                  <figure class="testimonials-avatar-box">
+                    <img src="./assets/images/logo-bsnl.png" alt="BSNL logo" data-experience-logo>
+                  </figure>
+                  <div>
+                    <h4 class="h4 testimonials-item-title" data-experience-title>Industrial Trainee</h4>
+                    <p class="experience-org" data-experience-date>BSNL, Ghaziabad · Jun 2017 – Jul 2017</p>
+                  </div>
+                </div>
+                <div class="testimonials-text" data-experience-text>
+                  <p>Learned web development using Adobe Dreamweaver and built a responsive portfolio website with HTML, CSS and PHP.</p>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - experience modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+            <button class="modal-close-btn" data-modal-close-btn aria-label="Close">
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="" alt="" data-modal-logo>
+              </figure>
+            </div>
+
+            <div class="modal-content">
+              <h4 class="h3 modal-title" id="modal-title" data-modal-title></h4>
+              <time data-modal-date></time>
+              <div data-modal-text></div>
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - research & teaching, achievements
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Research &amp; Teaching</h3>
+
+          <ul class="clients-list has-scrollbar">
+            <li class="clients-content"><span>Publication 2025: ML-based Detection and Localization of Communication Delay Attack in IoT, IEEE INDICON 2025</span></li>
+            <li class="clients-content"><span>2023 – 2025: Teaching Assistant at IIT Guwahati for CS203 DSA, CS245 Operating Systems and CS341 Computer Networks</span></li>
+          </ul>
+
+        </section>
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Achievements</h3>
+
+          <ul class="clients-list has-scrollbar">
+            <li class="clients-content"><span>2019: 1st position in Photography Competition</span></li>
+            <li class="clients-content"><span>2019: 1st position in Short Film Making Competition</span></li>
+            <li class="clients-content"><span>2019: 3rd position in Science Exhibition &amp; Paper Presentation</span></li>
+            <li class="clients-content"><span>2019: 3rd position in Paper Presentation</span></li>
+            <li class="clients-content"><span>2017: 2nd position in Photoshop Competition</span></li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <div class="skill-items">
+            <span class="skill-content">JavaScript (ES6+)</span>
+            <span class="skill-content">C/C++</span>
+            <span class="skill-content">Java</span>
+            <span class="skill-content">Python</span>
+            <span class="skill-content">SQL</span>
+            <span class="skill-content">React.js</span>
+            <span class="skill-content">Redux</span>
+            <span class="skill-content">Context API</span>
+            <span class="skill-content">React Router</span>
+            <span class="skill-content">Tailwind CSS</span>
+            <span class="skill-content">HTML5</span>
+            <span class="skill-content">CSS3</span>
+            <span class="skill-content">Axios</span>
+            <span class="skill-content">jQuery</span>
+            <span class="skill-content">Node.js</span>
+            <span class="skill-content">Express.js</span>
+            <span class="skill-content">RESTful APIs</span>
+            <span class="skill-content">Nodemailer</span>
+            <span class="skill-content">MongoDB</span>
+            <span class="skill-content">PostgreSQL</span>
+            <span class="skill-content">MySQL</span>
+            <span class="skill-content">JWT</span>
+            <span class="skill-content">Firebase Auth</span>
+            <span class="skill-content">Docker</span>
+            <span class="skill-content">Kubernetes</span>
+            <span class="skill-content">CI/CD</span>
+            <span class="skill-content">Git &amp; GitHub</span>
+            <span class="skill-content">Linux</span>
+            <span class="skill-content">Agile (Scrum / Kanban)</span>
+          </div>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Full Stack Web Developer (Gushwork, Bengaluru)</h4>
+              <span>Apr 2026 — Present</span>
+              <p class="timeline-text">• Engineered and scaled web solutions for an AI-powered growth platform, boosting search visibility and lead generation.</p>
+              <p class="timeline-text">• Developed full-stack workflows, optimised Core Web Vitals and built automated pipelines to capture high-intent buyer traffic.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Software Engineer (Innotab Technologies Pvt. Ltd., Bangalore)</h4>
+              <span>Feb 2020 — Apr 2023</span>
+              <p class="timeline-text">• Built scalable web applications with reusable components, Redux state management and robust RESTful APIs.</p>
+              <p class="timeline-text">• Streamlined SDLC workflows across QA and design teams, conducted code reviews and troubleshot production issues to boost reliability.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Web Developer Intern (MultiApps Technologies, Bangalore)</h4>
+              <span>Jul 2019 — Jan 2020</span>
+              <p class="timeline-text">• Built responsive UI components and a restaurant menu gallery, and integrated the frontend with backend APIs.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Industrial Trainee (BSNL, Ghaziabad)</h4>
+              <span>Jun 2017 — Jul 2017</span>
+              <p class="timeline-text">• Developed a responsive portfolio website using HTML, CSS and PHP.</p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline" aria-hidden="true"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">M.Tech, Computer Science (IIT Guwahati)</h4>
+              <span>2023 — 2025</span>
+              <p class="timeline-text">CGPA 7.35. Teaching Assistant for CS203 Data Structures &amp; Algorithms, CS245 Operating Systems and CS341 Computer Networks.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">B.Tech, Computer Engineering (Mizoram University)</h4>
+              <span>2015 — 2019</span>
+              <p class="timeline-text">CGPA 8.09.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">12th Class, CBSE (Sri Sankara Vidyalaya, Bhilai)</h4>
+              <span>2014</span>
+              <p class="timeline-text">81.4%</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">10th Class, CBSE (Jawahar Navodaya Vidyalaya, Kanker)</h4>
+              <span>2012</span>
+              <p class="timeline-text">85.5%</p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon>
+            </div>
+            <h3 class="h3">Certifications</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">SQL Beginner to Advanced (Codebasics)</h4>
+              <span>2024</span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Python Beginner to Advanced (Codebasics)</h4>
+              <span>2024</span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Internet of Things using Arduino (Mizoram University)</h4>
+              <span>2018</span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Machine Learning and AI (IIT Guwahati)</h4>
+              <span>2017</span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Programming Techniques Using C &amp; C++ (RCPL Kolkata)</h4>
+              <span>2017</span>
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>
+            </div>
+            <h3 class="h3">Publication</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title pub-title">Machine Learning-based Detection and Localization of Communication Delay Attack in IoT</h4>
+              <span>IEEE INDICON 2025 · IEEE Xplore</span>
+              <p class="timeline-text">• Designed DeLoC, an ML framework for detecting and localising communication delay attacks in IoT networks.</p>
+              <p class="timeline-text">• Implemented and compared Logistic Regression, Random Forest, XGBoost and LightGBM models.</p>
+              <p class="timeline-text">• Evaluated in Contiki-NG / Cooja network simulations.</p>
+              <!-- TODO: replace # with the IEEE Xplore paper URL -->
+              <a class="pub-link" href="#" target="_blank" rel="noopener"><ion-icon name="open-outline" aria-hidden="true"></ion-icon>View on IEEE Xplore</a>
+            </li>
+          </ol>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #PROJECTS
+      -->
+
+      <article class="blog" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <div class="blog-card">
+                <figure class="blog-banner-box banner-top">
+                  <img src="./assets/images/project-chatstamp.png" alt="ChatStamp popup listing ChatGPT and Claude chats grouped by day, each with its time" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">JavaScript · Chrome Extension (MV3) · CSS</p>
+                  </div>
+                  <h3 class="h4 blog-item-title">ChatStamp: Timestamps for AI Chats</h3>
+                  <p class="blog-text">
+                    A Chrome extension that shows when each ChatGPT and Claude chat started in the sidebar, puts a date
+                    and time on every message, and adds a popup to search chats by title, site and date. No server or
+                    account: all data stays on the device.
+                  </p>
+                  <div class="blog-links">
+                    <a href="https://github.com/vikask-iitg/chatstamp-timestamps-for-ai-chats-chrome-extension" target="_blank" rel="noopener"><ion-icon name="logo-github" aria-hidden="true"></ion-icon>GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="blog-post-item">
+              <div class="blog-card">
+                <figure class="blog-banner-box banner-top">
+                  <img src="./assets/images/project-greencart.jpg" alt="GreenCart homepage with a fresh-produce banner and grocery categories" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">React · Node.js · MongoDB · Stripe</p>
+                  </div>
+                  <h3 class="h4 blog-item-title">GreenCart: Grocery Delivery Platform</h3>
+                  <p class="blog-text">
+                    A full-stack MERN grocery delivery platform with APIs for products, carts, orders and addresses,
+                    Stripe payments and Cloudinary image hosting, deployed on Vercel.
+                  </p>
+                  <div class="blog-links">
+                    <a href="https://greencart-gs.vercel.app/" target="_blank" rel="noopener"><ion-icon name="open-outline" aria-hidden="true"></ion-icon>Live</a>
+                    <a href="https://github.com/vikask-iitg/greencart" target="_blank" rel="noopener"><ion-icon name="logo-github" aria-hidden="true"></ion-icon>GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="blog-post-item">
+              <div class="blog-card">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/project-authflow.jpg" alt="AuthFlow login and reset-password screens" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">React · Node.js · Express · JWT</p>
+                  </div>
+                  <h3 class="h4 blog-item-title">AuthFlow: MERN Authentication System</h3>
+                  <p class="blog-text">
+                    Secure authentication with JWTs in HTTP-only cookies, signup and login, email verification and
+                    OTP password reset, with APIs protected by auth middleware and Nodemailer.
+                  </p>
+                  <!-- TODO: replace # with the live URL -->
+                  <div class="blog-links">
+                    <a href="#" target="_blank" rel="noopener"><ion-icon name="open-outline" aria-hidden="true"></ion-icon>Live</a>
+                    <a href="https://github.com/vikask-iitg/mern-auth" target="_blank" rel="noopener"><ion-icon name="logo-github" aria-hidden="true"></ion-icon>GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="blog-post-item">
+              <div class="blog-card">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/project-netflix.jpg" alt="Netflix UI clone home screen with a featured title and Trending Now row" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">React · Firebase · TMDb API</p>
+                  </div>
+                  <h3 class="h4 blog-item-title">Netflix UI Clone</h3>
+                  <p class="blog-text">
+                    A responsive Netflix-style movie streaming interface with Firebase authentication, Firestore
+                    storage, trailer playback and category-based browsing.
+                  </p>
+                  <!-- TODO: replace # with the live URL -->
+                  <div class="blog-links">
+                    <a href="#" target="_blank" rel="noopener"><ion-icon name="open-outline" aria-hidden="true"></ion-icon>Live</a>
+                    <a href="https://github.com/vikask-iitg/netflix-clone" target="_blank" rel="noopener"><ion-icon name="logo-github" aria-hidden="true"></ion-icon>GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://maps.google.com/maps?q=Bengaluru%2C%20Karnataka&z=11&output=embed"
+              width="400" height="300" loading="lazy" title="Map of Bengaluru"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <!-- Messages are delivered by FormSubmit. The first submission sends you an activation email. -->
+          <form action="https://formsubmit.co/vikask.iitg@gmail.com" method="POST" class="form" data-form>
+
+            <input type="hidden" name="_subject" value="New message from your portfolio">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" aria-label="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" aria-label="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" aria-label="Your message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
