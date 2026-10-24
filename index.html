@@ -786,15 +786,15 @@
           <h3 class="h3 form-title">Contact Form</h3>
 
           <!-- Messages are delivered by FormSubmit. The first submission sends you an activation email. -->
-          <p class="form-success" data-form-success role="status" hidden>
-            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-            <span>Thanks for your message! I'll get back to you soon.</span>
+          <p class="form-success" data-form-status role="status" aria-live="polite" hidden>
+            <ion-icon class="status-ok" name="checkmark-circle" aria-hidden="true"></ion-icon>
+            <ion-icon class="status-err" name="alert-circle" aria-hidden="true"></ion-icon>
+            <span data-form-status-text></span>
           </p>
 
           <form action="https://formsubmit.co/vikask.iitg@gmail.com" method="POST" class="form" data-form>
 
             <input type="hidden" name="_subject" value="New message from your portfolio">
-            <input type="hidden" name="_next" value="https://vikaskhurendra.vercel.app/?sent=1#contact">
             <input type="hidden" name="_captcha" value="false">
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 

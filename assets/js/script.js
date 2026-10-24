@@ -89,19 +89,69 @@ document.addEventListener("keydown", function (e) {
 
 
 
-// contact form: enable the button only when the form is valid
+// contact form: sends in the background via FormSubmit's AJAX endpoint (no page change).
+// While a message is sending the button is locked, so only one can be sent at a time.
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+const formBtnLabel = formBtn.querySelector("span");
+const formStatus = document.querySelector("[data-form-status]");
+const formStatusText = document.querySelector("[data-form-status-text]");
+
+const FORM_ENDPOINT = form.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
+
+let sending = false;
+
+const updateFormBtn = function () {
+  formBtnLabel.textContent = sending ? "Sending…" : "Send Message";
+  formBtn.toggleAttribute("disabled", sending || !form.checkValidity());
+}
+
+const showFormStatus = function (ok, message) {
+  formStatus.classList.toggle("is-error", !ok);
+  formStatusText.textContent = message;
+  formStatus.hidden = false;
+}
 
 formInputs.forEach(function (input) {
-  input.addEventListener("input", function () {
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
+  input.addEventListener("input", updateFormBtn);
+});
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  if (sending || !form.checkValidity()) return;
+
+  // honeypot filled in: almost certainly a bot, so pretend it worked
+  if (form.elements._honey && form.elements._honey.value) {
+    form.reset();
+    showFormStatus(true, "Your message has been sent successfully. I'll get back to you soon.");
+    return;
+  }
+
+  sending = true;
+  formStatus.hidden = true;
+  updateFormBtn();
+
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: new FormData(form)
+    });
+    const data = await res.json().catch(function () { return {}; });
+
+    if (res.ok && String(data.success) === "true") {
+      form.reset();
+      showFormStatus(true, "Your message has been sent successfully. I'll get back to you soon.");
     } else {
-      formBtn.setAttribute("disabled", "");
+      showFormStatus(false, data.message || "Sorry, your message couldn't be sent. Please try again.");
     }
-  });
+  } catch (err) {
+    showFormStatus(false, "Sorry, your message couldn't be sent. Check your connection, or email me at vikask.iitg@gmail.com.");
+  } finally {
+    sending = false;
+    updateFormBtn();
+  }
 });
 
 
@@ -134,14 +184,3 @@ navigationLinks.forEach(function (link) {
 const initialPage = location.hash.slice(1);
 if (document.querySelector('[data-page="' + initialPage + '"]')) showPage(initialPage);
 
-
-
-// after FormSubmit redirects back (?sent=1#contact), show a thank-you note
-const formSuccess = document.querySelector("[data-form-success]");
-const params = new URLSearchParams(location.search);
-
-if (formSuccess && params.get("sent") === "1") {
-  showPage("contact");
-  formSuccess.hidden = false;
-  history.replaceState(null, "", location.pathname + "#contact");
-}
